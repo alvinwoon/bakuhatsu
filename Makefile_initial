@@ -1,0 +1,13 @@
+CC = gcc
+CFLAGS = -O2 -Wall
+SRCDIR = src
+
+# Basic makefile for now
+all:
+	@echo "Building bakuhatsu..."
+	@echo "TODO: implement proper build system"
+
+clean:
+	rm -f *.o
+
+.PHONY: all clean
