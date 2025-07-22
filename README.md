@@ -1,4 +1,4 @@
-**Bakuhatsu** is a SIMD-accelerated Monte Carlo Value-at-Risk engine featuring real-time intraday risk recalibration, non-Gaussian tail modeling, and dynamic correlation breakdown detection. Tailored for vol explosion. 
+**Bakuhatsu** is a SIMD-accelerated Monte Carlo Value-at-Risk engine featuring real-time intraday risk recalibration, non-Gaussian tail modeling, and dynamic correlation breakdown detection during variance explosion.
 
 ## Core Architecture
 
@@ -23,7 +23,7 @@
 - **Numerical Stability**: Maintaining precision in parallel accumulation operations
 
 
-## Features
+## Finished Features
 
 ### ⚡ Real-Time Intraday VaR Recalibration
 - **Sub-100μs VaR updates** using streaming market data
@@ -50,7 +50,7 @@
 
 ## 🔬 Technical documentation
 
-### Advanced Random Number Generation
+### Random Number Generation
 ```c
 // Parallel Mersenne Twister with NEON acceleration
 simd_rng_pool_t* pool = simd_rng_pool_create(16); // 16 parallel generators
