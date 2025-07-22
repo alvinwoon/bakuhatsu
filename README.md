@@ -1,6 +1,6 @@
 **Bakuhatsu** is a SIMD-accelerated Monte Carlo Value-at-Risk engine featuring real-time intraday risk recalibration, non-Gaussian tail modeling, and dynamic correlation breakdown detection during variance explosion.
 
-## Core Architecture
+## Core Arch
 
 ### SIMD Acceleration Components
 - **Parallel RNG**: Multiple Mersenne Twister or XorShift128+ generators using ARM NEON intrinsics
@@ -23,7 +23,7 @@
 - **Numerical Stability**: Maintaining precision in parallel accumulation operations
 
 
-## Finished Features
+## Current spec
 
 ### Real-Time Intraday VaR Recalibration
 - **Sub-100μs VaR updates** using streaming market data
@@ -42,7 +42,7 @@
 - Automatic adaptation when traditional correlation matrices fail during crises
 - Early warning system for systemic risk events
 
-### Extreme Performance Optimization
+### Performance Optimization
 - **ARM NEON SIMD intrinsics** for parallel Monte Carlo path generation
 - **Cache-oblivious algorithms** optimized for modern CPU memory hierarchies
 - **Lock-free data structures** for concurrent streaming data processing
