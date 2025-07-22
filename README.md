@@ -25,30 +25,30 @@
 
 ## Finished Features
 
-### ⚡ Real-Time Intraday VaR Recalibration
+### Real-Time Intraday VaR Recalibration
 - **Sub-100μs VaR updates** using streaming market data
 - Continuous risk monitoring without overnight batch processing limitations
 - Statistical validity maintained with limited historical samples through advanced bootstrapping
 
-### 📊 Non-Gaussian Tail Modeling
+### Non-Gaussian Tail Modeling
 - **Lévy processes** with SIMD-optimized characteristic function inversions
 - **Normal Inverse Gaussian (NIG)** distributions for realistic fat-tail modeling
 - **Tempered stable processes** for capturing extreme market movements
 - Moves beyond flawed Black-Scholes assumptions
 
-### 🔄 Dynamic Correlation Breakdown Detection
+### Dynamic Correlation Breakdown Detection
 - **Real-time regime-switching** correlation models
 - **Market stress indicators** for correlation structure monitoring
 - Automatic adaptation when traditional correlation matrices fail during crises
 - Early warning system for systemic risk events
 
-### 🏎️ Extreme Performance Optimization
+### Extreme Performance Optimization
 - **ARM NEON SIMD intrinsics** for parallel Monte Carlo path generation
 - **Cache-oblivious algorithms** optimized for modern CPU memory hierarchies
 - **Lock-free data structures** for concurrent streaming data processing
 - **Vectorized quantile estimation** using order statistics
 
-## 🔬 Technical documentation
+## Technical documentation
 
 ### Random Number Generation
 ```c
@@ -71,7 +71,7 @@ correlation_monitor_t* monitor = correlation_monitor_create(portfolio_size);
 bool regime_change = correlation_monitor_update(monitor, returns_vector, timestamp);
 ```
 
-## 📈 Performance Benchmarks
+## Performance Benchmarks
 
 | Method | Traditional VaR | Bakuhatsu | Speedup |
 |--------|----------------|-----------|---------|
@@ -82,7 +82,7 @@ bool regime_change = correlation_monitor_update(monitor, returns_vector, timesta
 
 *Benchmarks on ARM Cortex-A78 @ 2.84GHz with 1M Monte Carlo paths*
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
@@ -125,7 +125,7 @@ src/
     └── cache_oblivious.{c,h}
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - **ARM processor with NEON support** (Apple Silicon M1/M2/M3, ARM Cortex-A series)
@@ -332,14 +332,14 @@ uint32_t generated = simd_generate_uniform_array(rng, output, 1024);
 simd_rng_pool_warmup(rng, 1000);
 ```
 
-### ✅ **Implemented & Tested**
+### **Implemented & Tested**
 - **ARM NEON SIMD Infrastructure**: Complete with runtime detection and scalar fallback
 - **Parallel Random Number Generation**: Mersenne Twister MT19937 with SIMD optimization
 - **Mathematical Framework**: Box-Muller transformation and NIG distribution sampling
 - **Real-Time Correlation Monitoring**: Framework with regime detection algorithms
 - **Build System**: Cross-platform Makefile with automatic architecture detection
 
-### 📊 **Current Performance**
+### **Current Performance**
 - **SIMD Operations**: 1.6+ GFLOPS on Apple M1 (4x parallel processing)
 - **Monte Carlo Simulations**: 1.1+ million simulations/second
 - **Portfolio Risk Calculation**: 10,000 asset portfolio in <10ms
